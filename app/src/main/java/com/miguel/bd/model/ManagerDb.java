@@ -29,11 +29,11 @@ public class ManagerDb {
     public long insertDate(Date date) {
         openDbWrite();
         ContentValues valores = new ContentValues();
-        valores.put("name_date", date.getNombre_date());
-        valores.put("lastname_date", date.getLastnombre_date());
-        valores.put("direction_date", date.getLocation_date());
-        valores.put("id_city", date.getId_ciudad());
-        long res = db.insert("dates", null, valores);
+        valores.put("nombre_date", date.getNombre_date());
+        valores.put("lastnombre_date", date.getLastnombre_date());
+        valores.put("location_date", date.getLocation_date());
+        valores.put("id_ciudad", date.getId_ciudad());
+        long res = db.insert("Date", null, valores);
         close();
         return res;
     }
@@ -41,7 +41,7 @@ public class ManagerDb {
     public long insertCity(Ciudad ciudad) {
         openDbWrite();
         ContentValues valores = new ContentValues();
-        valores.put("name_city", ciudad.getName());
+        valores.put("nombre_ciudad", ciudad.getName());
         long res = db.insert("Ciudad", null, valores);
         close();
         return res;
@@ -50,7 +50,7 @@ public class ManagerDb {
     public long insertUser(Usuario usuario) {
         openDbWrite();
         ContentValues valores = new ContentValues();
-        valores.put("name_user", usuario.getNombre_usuario());
+        valores.put("nombre_usuario", usuario.getNombre_usuario());
         long res = db.insert("Usuario", null, valores);
         close();
         return res;
