@@ -5,40 +5,31 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.MainActivity"
+    tools:context=".controller.Ciudades"
+    android:padding="16dp"
     android:orientation="vertical"
-    android:padding="16dp">
+    >
     <TextView
-        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Ingresa registros a la base de datos"
         android:layout_marginTop="20dp"
-        tools:ignore="MissingConstraints" />
+        android:text="Ingresa los datos de tu nueva ciudad" />
+
+    <EditText
+        android:id="@+id/txt_name_city"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:hint="Nombre:"/>
 
     <Button
-        android:id="@+id/btn_agregar_ciudad"
+        android:id="@+id/btn_insert_city"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Agregar ciudad"
+        android:text="Insertar"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"/>
-
-    <Button
-        android:id="@+id/btn_agregar_dato"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Agregar dato"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
-
-    <Button
-        android:id="@+id/btn_agregar_usuario"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Agregar usuario"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
 
 </LinearLayout>
